@@ -1,0 +1,7 @@
+\encoding utf8
+\set ON_ERROR_STOP on
+
+DROP ROLE IF EXISTS db1owner;
+DROP ROLE IF EXISTS db1user1;
+DROP ROLE IF EXISTS db1user2;
+

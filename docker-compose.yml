@@ -1,0 +1,14 @@
+services:
+  postgres:
+    image: 'postgres:16'
+    hostname: ${POSTGRES_HOST}
+    environment:
+      - POSTGRES_HOST
+      - POSTGRES_USER
+      - POSTGRES_PASSWORD
+      - PGPASSWORD=${POSTGRES_PASSWORD}
+    ports:
+    - '5432:5432'
+    working_dir: '/work'
+    volumes:
+    - '.:/work'
