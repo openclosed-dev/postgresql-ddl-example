@@ -15,7 +15,7 @@ make
 ## How to test
 
 ```
-docker compose up -V -d
+docker compose up -dV
 make clean
 make
 make test
