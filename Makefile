@@ -13,4 +13,4 @@ clean:
 	@rm -rf $(target_dir)
 
 test: $(tar_file)
-	@docker compose exec postgres /bin/bash test.sh
+	@docker compose run --rm psql test.sh

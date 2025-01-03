@@ -3,12 +3,20 @@ services:
     image: 'postgres:16'
     hostname: ${POSTGRES_HOST}
     environment:
-      - POSTGRES_HOST
       - POSTGRES_USER
       - POSTGRES_PASSWORD
-      - PGPASSWORD=${POSTGRES_PASSWORD}
     ports:
     - '5432:5432'
+  psql:
+    build: .
+    environment:
+      - POSTGRES_HOST
+      - POSTGRES_USER
+      - PGPASSWORD=${POSTGRES_PASSWORD}
+    stdin_open: true
+    tty: true
     working_dir: '/work'
     volumes:
     - '.:/work'
+    profiles:
+    - disabled
