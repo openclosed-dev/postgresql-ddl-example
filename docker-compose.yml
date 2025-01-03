@@ -1,5 +1,5 @@
 services:
-  postgres:
+  server:
     image: 'postgres:16'
     hostname: ${POSTGRES_HOST}
     environment:
@@ -7,7 +7,7 @@ services:
       - POSTGRES_PASSWORD
     ports:
     - '5432:5432'
-  psql:
+  client:
     build: .
     environment:
       - POSTGRES_HOST
