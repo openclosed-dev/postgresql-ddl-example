@@ -22,6 +22,8 @@ function generate_password_file() {
     then
         echo "[INFO] Password file '${password_file}' already exists. Skipped generating new passwords."
     else
+        touch ${password_file}
+        chmod 600 ${password_file}
         for user in "$@"
         do
             echo "\set ${user}_password $(generate_password)" >> ${password_file}
