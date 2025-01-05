@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source functions.sh
+source lib/functions.sh
 
 require_env 'POSTGRES_HOST'
 require_env 'POSTGRES_USER'
